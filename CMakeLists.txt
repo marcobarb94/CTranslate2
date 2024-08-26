@@ -236,6 +236,9 @@ if(CMAKE_SYSTEM_PROCESSOR MATCHES "(arm64)|(aarch64)"
 elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "(x86_64)|(amd64)|(AMD64)")
   add_definitions(-DCT2_X86_BUILD)
   set(CT2_BUILD_ARCH "x86_64")
+elseif (CMAKE_SYSTEM_PROCESSOR MATCHES "armv6l") # uname -m
+  add_definitions(-mfp16-format=ieee -mno-unaligned-access -mfloat-abi=hard -mfpu=auto -mtune=arm1176jzf-s -mcpu=arm1176jzf-s -march=armv6kz+fp)
+  set(CT2_BUILD_ARCH "armv6")
 
   if(BUILD_SHARED_LIBS)
     set(CMAKE_POSITION_INDEPENDENT_CODE ON)
