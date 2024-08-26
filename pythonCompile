@@ -14,7 +14,7 @@ cmake \
 mkdir build
 cd build
 
-make -j $(nproc) install
+make -j 1 install
 
 
 
