@@ -9,6 +9,7 @@ cmake \
 -DWITH_RUY=ON \
 -DOPENMP_RUNTIME=NONE \
 -DBUILD_TESTS=OFF \
+-DOPENMP_RUNTIME=COMP \
 .
 
 mkdir build
