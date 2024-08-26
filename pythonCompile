@@ -1,0 +1,3 @@
+python -m venv venvBuild
+. venvBuild/bin/activate
+  pip install setuptools wheel build pybind11
