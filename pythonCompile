@@ -1,3 +1,7 @@
+sudo apt-get install libopenblas-dev
+
+
+
 mkdir build
 cd build
 python -m venv venvBuild
