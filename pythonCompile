@@ -25,4 +25,4 @@ python -m venv venvBuild
 pip install setuptools wheel build pybind11
 sudo apt install python3-dev
 cd ../python
-python -m build -w . --no-isolation --outdir build/
+CTRANSLATE2_ROOT="/home/pi/prove_python/CTranslate2/build/install" python -m build -w . --no-isolation --outdir build/
