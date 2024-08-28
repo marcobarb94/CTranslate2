@@ -85,7 +85,7 @@ namespace ctranslate2 {
     }
 
     static py::dict get_array_interface(const StorageView& view) {
-      py::tuple shape(view.rank());
+      py::tuple shape(static_cast<size_t>(view.rank()));
       for (size_t i = 0; i < shape.size(); ++i)
         shape[i] = view.dim(i);
 
